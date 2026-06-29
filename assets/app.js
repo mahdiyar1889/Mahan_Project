@@ -8,25 +8,23 @@
   function esc(v) { return String(v ?? "").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m])); }
   function num(v) { return typeof v !== "number" ? esc(v) : new Intl.NumberFormat("fa-IR", { maximumFractionDigits: 2 }).format(v); }
   function icon(key) { return iconMap[key] || "◆"; }
-  function pageById(id) { return data.pages.find(p => p.page_id === id); }
 
   function shell(content, showBack = false) {
     return `<div class="app-wrap"><div class="shell"><header class="topbar"><div class="topbar-title"><div class="logo">◆</div><div><h1>${esc(data.settings.dashboard_title || "داشبورد")}</h1></div></div><div class="top-actions">${showBack ? `<button class="soft-btn" data-action="back">← بازگشت</button>` : ""}</div></header><main class="main">${content}</main></div></div>`;
   }
 
   function renderMenu() {
-    const cards = [...data.pages].sort((a,b) => a.order-b.order).map(p => `<button class="menu-card" data-page="${esc(p.page_id)}"><div class="menu-icon">${icon(p.icon)}</div><h3>${esc(p.title)}</h3><p>${esc(p.subtitle)}</p></button>`).join("");
+    const cards = [...data.pages].sort((a,b) => a.order-b.order).map(p => `<button class="menu-card" data-page="${esc(p.page_id)}"><div class="menu-icon">${icon(p.icon)}</div><h3>${esc(p.title)}</h3><p>${esc(p.subtitle)}</p><span class="card-arrow">←</span></button>`).join("");
     app.innerHTML = shell(`<section class="menu-grid">${cards}</section>`);
     app.querySelectorAll("[data-page]").forEach(btn => btn.addEventListener("click", (e) => { currentPage = e.currentTarget.dataset.page; render(); }));
   }
 
-  // --- توابع رندر جزئیات ---
   function renderSection(s) {
     return `<article class="accordion ${s.default_open ? "open" : ""}">
-      <button class="accordion-header">${esc(s.title)}<span class="chev">◀</span></button>
+      <button class="accordion-header">${esc(s.title)}<small>${esc(s.description)}</small><span class="chev">◀</span></button>
       <div class="accordion-body">
-        ${(s.kpis||[]).map(k => `<div>${esc(k.title)}: ${num(k.value)} ${esc(k.unit)}</div>`).join("")}
-        ${(s.tables||[]).map(t => `<table class="data-table"><thead><tr>${t.columns.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`).join("")}
+        ${(s.kpis||[]).map(k => `<article class="kpi"><div class="kpi-icon">${icon(k.icon)}</div><div><span class="kpi-value">${num(k.value)}</span><span class="kpi-unit">${esc(k.unit)}</span></div><div class="kpi-title">${esc(k.title)}</div></article>`).join("")}
+        ${(s.tables||[]).map(t => `<div class="table-box"><table class="data-table"><thead><tr>${t.columns.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`).join("")}
       </div>
     </article>`;
   }
@@ -40,7 +38,7 @@
 
   function render(){
     if(!app) return;
-    if(currentPage) return renderReport(pageById(currentPage));
+    if(currentPage) return renderReport(data.pages.find(p => p.page_id === currentPage));
     renderMenu();
   }
   render();
