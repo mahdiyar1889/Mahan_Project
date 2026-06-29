@@ -3,12 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>داشبورد مدیریتی</title>
+  <title>داشبورد مدیریتی شهرک نمونه</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    #login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f2f5; display: flex; justify-content: center; align-items: center; z-index: 9999; font-family: Tahoma, Arial, sans-serif; }
+    .login-box { background: white; padding: 30px 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; width: 100%; max-width: 350px; }
+    .login-box input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; direction: ltr; }
+    .login-box button { width: 100%; padding: 12px; background: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #app-wrapper { display: none; }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
-  <script src="assets/dashboard-data.js"></script>
-  <script src="assets/app.js"></script>
+  <div id="login-overlay">
+    <div class="login-box">
+      <h2>ورود به سامانه</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="checkLogin()">ورود</button>
+    </div>
+  </div>
+
+  <div id="app-wrapper">
+    <div id="app"></div>
+    <script src="assets/dashboard-data.js"></script>
+    <script src="assets/app.js"></script>
+  </div>
+
+  <script>
+    function checkLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === "admin" && pass === "1234") {
+        document.getElementById('login-overlay').style.display = 'none';
+        document.getElementById('app-wrapper').style.display = 'block';
+      } else {
+        alert("نام کاربری یا رمز عبور اشتباه است");
+      }
+    }
+  </script>
 </body>
 </html>
