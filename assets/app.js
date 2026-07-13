@@ -61,7 +61,6 @@
       <section class="hero">
         <div>
           <h2>فهرست گزارش‌های مدیریتی</h2>
-          <p>برای مشاهده جزئیات، یکی از صفحات اصلی را انتخاب کنید.</p>
         </div>
       </section>
       <section class="menu-grid">${cards}</section>`;
