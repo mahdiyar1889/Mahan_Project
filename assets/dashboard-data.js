@@ -16,11 +16,11 @@ window.DASHBOARD_DATA = {
       "sections": [
         {
           "section_id": "design_service",
-          "title": "1- شرح خدمات مطالعات",
+          "title": "1- شرح خدمات مطالعه",
           "order": 1,
           "default_open": true,
           "attachments": [
-            { "title": "قرارداد طراحی", "file_name": "mahan_contract_design.pdf" }
+            { "title": "شرح خدمات قرارداد طراحی", "file_name": "mahan_contract_design.pdf" }
           ]
         },
         {
