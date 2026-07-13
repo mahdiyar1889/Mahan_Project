@@ -164,11 +164,15 @@
 
   function renderAttachments(items=[]) {
     if(!items.length) return "";
-    return `<div class="attach-box"><div class="box-title">فایل‌های ضمیمه</div>${items.map(a=>`
-      <div class="attach-item"><div><strong>${esc(a.title)}</strong><div class="muted">${esc(a.description)}</div></div>
-      <button class="soft-btn">📎 ${esc(a.file_name)}</button></div>`).join("")}</div>`;
+    return `<div class="attach-box">
+      ${items.map(a=>`
+        <div class="attach-item">
+          <div><strong>${esc(a.title)}</strong><div class="muted">${esc(a.description || "")}</div></div>
+          <button class="soft-btn">📎 ${esc(a.file_name)}</button>
+        </div>`).join("")}
+    </div>`;
   }
-
+  
   function renderMap(layers=[]) {
     if(!layers.length) return "";
     return `<div class="map-box"><div class="box-title">نقشه تعاملی</div>
