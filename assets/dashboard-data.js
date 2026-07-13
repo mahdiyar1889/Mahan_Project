@@ -1,81 +1,31 @@
 window.DASHBOARD_DATA = {
-  "settings": {
+  "settings": { 
     "dashboard_title": "داشبورد مدیریتی پروژه ماهان شهروند کرج",
-    "organization_name": "مهندسین مشاور پارس پرنون",
-    "updated_at": "تیر ۱۴۰۵",
-    "version": "نسخه ۱.۰"
+    "organization_name": "مهندسان مشاور پارس پرنون",
+    "updated_at": "تیر ۱۴۰۵"
   },
   "pages": [
     {
       "page_id": "design",
       "title": "طراحی",
-      "subtitle": "مدیریت اسناد، مطالعات و نقشه‌های طراحی",
       "icon": "briefcase-business",
-      "order": 1,
-      "enabled": true,
       "sections": [
-        {
-          "section_id": "design_service",
-          "title": "1- شرح خدمات مطالعه",
-          "order": 1,
-          "default_open": true,
-          "attachments": [
-            { "title": "شرح خدمات قرارداد طراحی", "file_name": "mahan_contract_design.pdf" }
-          ]
-        },
-        {
+        { 
           "section_id": "design_phase1",
           "title": "2- مطالعات مرحله اول",
-          "order": 2,
-          "default_open": false,
-          "texts": [
-            { "title": "معماری", "body": "نقشه‌های مقدماتی و رندرهای سه بعدی" },
-            { "title": "سازه", "body": "نقشه‌های مقدماتی سازه" },
-            { "title": "تاسیسات", "body": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی" }
-          ],
           "attachments": [
-            { "title": "مجموع نقشه‌های مرحله اول", "file_name": "phase1_plans.pdf" }
+            { "title": "معماری", "description": "نقشه‌های مقدماتی + رندرهای 3D", "file_name": "assets/Architecture_Pre.zip" },
+            { "title": "سازه", "description": "نقشه‌های مقدماتی سازه", "file_name": "assets/Structure_Pre.zip" },
+            { "title": "تاسیسات", "description": "نقشه‌های نهایی مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP_Final.zip" }
           ]
         },
         {
           "section_id": "design_phase2",
           "title": "3- مطالعات مرحله دوم",
-          "order": 3,
-          "default_open": false,
-          "texts": [
-            { "title": "معماری و سازه", "body": "نقشه‌های نهایی ، دفترچه محاسبات و آزمایش ژئوتکنیک" },
-            { "title": "تاسیسات", "body": "نقشه‌های نهایی تاسیسات مکانیکی و برقی ، دفترچه محاسبات" }
-          ],
           "attachments": [
-            { "title": "مجموع نقشه های فاز دو", "file_name": "phase2_docs.zip", "description": "فایل‌های اجرایی فاز دو معماری، سازه و تاسیسات" }
-          ]
-        },
-        {
-          "section_id": "design_tender",
-          "title": "4- برآورد و اسناد مناقصه",
-          "order": 4,
-          "default_open": false,
-          "attachments": [
-            { "title": "اسناد مناقصه و برآورد", "file_name": "tender_docs.xlsx"}
-          ]
-        }
-      ]
-    },
-    {
-      "page_id": "supervision",
-      "title": "نظارت",
-      "subtitle": "گزارشات نظارت کارگاهی و کنترل پروژه",
-      "icon": "badge-check",
-      "order": 2,
-      "enabled": true,
-      "sections": [
-        {
-          "section_id": "supervision_reports",
-          "title": "گزارشات نظارت",
-          "order": 1,
-          "default_open": true,
-          "attachments": [
-             { "title": "گزارش ماهانه نظارت", "file_name": "supervision_report_01.pdf", "description": "گزارش وضعیت کارگاهی" }
+            { "title": "معماری و سازه", "description": "نقشه‌های نهایی و رندرهای نهایی سه بعدی", "file_name": "assets/Architecture.zip" },
+            { "title": "سازه", "description": "نقشه‌های نهایی، دفترچه محاسبات و آزمایش ژئوتکنیک", "file_name": "assets/Structure.zip" },
+            { "title": "تاسیسات", "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP.zip" }
           ]
         }
       ]
