@@ -27,7 +27,7 @@ window.DASHBOARD_DATA = {
           "attachments": [
             { "title": "معماری", "description": "نقشه‌های مقدماتی و رندرهای اولیه سه بعدی", "file_name": "assets/Architecture_Pre.rare" },
             { "title": "سازه", "description": "نقشه‌های مقدماتی سازه", "file_name": "assets/Structure_Pre.rare" },
-            { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP_Pre.rare" }
+            { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/M&E_Pre.rare" }
           ]
         },
         {
@@ -36,7 +36,7 @@ window.DASHBOARD_DATA = {
           "attachments": [
             { "title": "معماری", "description": "نقشه‌های نهایی معماری و رندرهای نهایی سه بعدی", "file_name": "assets/Architecture.rare" },
             { "title": "سازه", "description": "نقشه‌های نهایی سازه، دفترچه محاسبات و آزمایش ژئوتکنیک", "file_name": "assets/Structure.rare" },
-            { "title": "تاسیسات", "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP.rare" }
+            { "title": "تاسیسات", "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/M&E.rare" }
           ]
         },
         {
