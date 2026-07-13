@@ -162,15 +162,21 @@
     return items.map(t=>`<div class="text-box"><strong>${esc(t.title)}</strong>${esc(t.body)}</div>`).join("");
   }
 
-  function renderAttachments(items=[]) {
-    if(!items.length) return "";
-    return `<div class="attach-box">
-      ${items.map(a=>`
-        <div class="attach-item">
-          <div><strong>${esc(a.title)}</strong><div class="muted">${esc(a.description || "")}</div></div>
-          <button class="soft-btn">📎 ${esc(a.file_name)}</button>
-        </div>`).join("")}
-    </div>`;
+ function renderAttachments(items = []) {
+    // اگر لیست فایل‌ها خالی باشد، کلا چیزی نمایش داده نمی‌شود
+    if (!items || items.length === 0) return "";
+    
+    return `
+      <div class="attach-box">
+        ${items.map(a => `
+          <div class="attach-item">
+            <div><strong>${esc(a.title)}</strong></div>
+            <a href="${esc(a.file_name)}" class="soft-btn" style="text-decoration:none;" download>
+              📎 دریافت ${esc(a.file_name)}
+            </a>
+          </div>
+        `).join("")}
+      </div>`;
   }
   
   function renderMap(layers=[]) {
