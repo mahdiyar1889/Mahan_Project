@@ -12,36 +12,37 @@ window.DASHBOARD_DATA = {
       "icon": "briefcase-business",
       "order": 1,
       "sections": [
+        
         {
           "section_id": "s1",
           "title": "1- شرح خدمات مطالعات",
           "attachments": [
-            { "title": "شرح خدمات مطالعات", "file_name": "assets/Service_Description.zip" },
-            { "title": "قرارداد طراحی", "file_name": "assets/mahan_contract_design.pdf" }
+            { "title": "شرح خدمات قرارداد طراحی", "file_name": "assets/mahan_contract_design.pdf" }
           ]
         },
+        
         {
           "section_id": "s2",
           "title": "2- مطالعات مرحله اول",
           "attachments": [
-            { "title": "معماری", "description": "نقشه‌های مقدماتی + رندرهای 3D", "file_name": "assets/Architecture_Pre.rare" },
+            { "title": "معماری", "description": "نقشه‌های مقدماتی و رندرهای اولیه سه بعدی", "file_name": "assets/Architecture_Pre.rare" },
             { "title": "سازه", "description": "نقشه‌های مقدماتی سازه", "file_name": "assets/Structure_Pre.rare" },
-            { "title": "تاسیسات", "description": "نقشه‌های نهایی مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP_Pre.rare" }
+            { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP_Pre.rare" }
           ]
         },
         {
           "section_id": "s3",
           "title": "3- مطالعات مرحله دوم",
           "attachments": [
-            { "title": "معماری و سازه", "description": "نقشه‌های نهایی و رندرهای نهایی سه بعدی", "file_name": "assets/Architecture.rare" },
-            { "title": "سازه", "description": "نقشه‌های نهایی، دفترچه محاسبات و آزمایش ژئوتکنیک", "file_name": "assets/Structure.rare" },
+            { "title": "معماری", "description": "نقشه‌های نهایی معماری و رندرهای نهایی سه بعدی", "file_name": "assets/Architecture.rare" },
+            { "title": "سازه", "description": "نقشه‌های نهایی سازه، دفترچه محاسبات و آزمایش ژئوتکنیک", "file_name": "assets/Structure.rare" },
             { "title": "تاسیسات", "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/MEP.rare" }
           ]
         },
         {
           "section_id": "s4",
           "title": "4- برآورد و اسناد مناقصه",
-          "attachments": [{ "title": "دانلود اسناد برآورد و مناقصه", "file_name": "assets/Tender.zip" }]
+          "attachments": [{ "title": "دانلود اسناد مناقصه و برآورد", "file_name": "assets/Tender.zip" }]
         }
       ]
     },
