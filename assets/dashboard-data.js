@@ -29,12 +29,12 @@ window.DASHBOARD_DATA = {
           "order": 2,
           "default_open": false,
           "texts": [
-            { "title": "معماری", "body": "نقشه‌های مقدماتی + رندرهای 3D" },
+            { "title": "معماری", "body": "نقشه‌های مقدماتی و رندرهای سه بعدی" },
             { "title": "سازه", "body": "نقشه‌های مقدماتی سازه" },
-            { "title": "تاسیسات", "body": "نقشه‌های نهایی مکانیکی و برقی" }
+            { "title": "تاسیسات", "body": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی" }
           ],
           "attachments": [
-            { "title": "نقشه‌های مرحله اول", "file_name": "phase1_plans.pdf", "description": "مجموعه نقشه‌های مرحله اول معماری و سازه" }
+            { "title": "مجموع نقشه‌های مرحله اول", "file_name": "phase1_plans.pdf" }
           ]
         },
         {
@@ -43,11 +43,11 @@ window.DASHBOARD_DATA = {
           "order": 3,
           "default_open": false,
           "texts": [
-            { "title": "معماری و سازه", "body": "نقشه‌های نهایی + دفترچه محاسبات + آزمایش ژئوتکنیک" },
-            { "title": "تاسیسات", "body": "نقشه‌های اجرایی مکانیکی و برقی + دفترچه محاسبات" }
+            { "title": "معماری و سازه", "body": "نقشه‌های نهایی ، دفترچه محاسبات و آزمایش ژئوتکنیک" },
+            { "title": "تاسیسات", "body": "نقشه‌های نهایی تاسیسات مکانیکی و برقی ، دفترچه محاسبات" }
           ],
           "attachments": [
-            { "title": "اسناد فاز دو", "file_name": "phase2_docs.zip", "description": "فایل‌های اجرایی فاز دو معماری، سازه و تاسیسات" }
+            { "title": "مجموع نقشه های فاز دو", "file_name": "phase2_docs.zip", "description": "فایل‌های اجرایی فاز دو معماری، سازه و تاسیسات" }
           ]
         },
         {
@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
           "order": 4,
           "default_open": false,
           "attachments": [
-            { "title": "اسناد مناقصه و برآورد", "file_name": "tender_docs.xlsx", "description": "فهرست‌بها و اسناد نهایی مناقصه" }
+            { "title": "اسناد مناقصه و برآورد", "file_name": "tender_docs.xlsx"}
           ]
         }
       ]
