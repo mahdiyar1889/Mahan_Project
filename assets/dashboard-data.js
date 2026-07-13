@@ -1,6 +1,6 @@
 window.DASHBOARD_DATA = {
   "settings": { 
-    "dashboard_title": "داشبورد مدیریتی پروژه ماهان شهروند کرج",
+    "dashboard_title": "داشبورد مدیریتی فروشگاه شهروند ماهان کرج",
     "organization_name": "مهندسان مشاور پارس پرنون",
     "updated_at": "تیر ۱۴۰۵"
   },
