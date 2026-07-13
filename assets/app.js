@@ -162,17 +162,20 @@
     return items.map(t=>`<div class="text-box"><strong>${esc(t.title)}</strong>${esc(t.body)}</div>`).join("");
   }
 
- function renderAttachments(items = []) {
+  function renderAttachments(items = []) {
     // اگر لیست فایل‌ها خالی باشد، کلا چیزی نمایش داده نمی‌شود
     if (!items || items.length === 0) return "";
     
     return `
       <div class="attach-box">
         ${items.map(a => `
-          <div class="attach-item">
-            <div><strong>${esc(a.title)}</strong></div>
-            <a href="${esc(a.file_name)}" class="soft-btn" style="text-decoration:none;" download>
-              📎 دریافت ${esc(a.file_name)}
+          <div class="attach-item" style="padding: 10px 0; border-bottom: 1px solid #f1f5f9;">
+            <div style="margin-bottom: 5px;">
+              <strong style="color: #1e293b;">${esc(a.title)}</strong>
+              ${a.description ? `<div style="font-size: 12px; color: #64748b; margin-top: 2px;">${esc(a.description)}</div>` : ""}
+            </div>
+            <a href="${esc(a.file_name)}" class="soft-btn" style="text-decoration:none; display: inline-block; margin-top: 5px;" download>
+              📎 دریافت ${esc(a.file_name.split('/').pop())}
             </a>
           </div>
         `).join("")}
