@@ -20,7 +20,7 @@ window.DASHBOARD_DATA = {
           "order": 1,
           "default_open": true,
           "attachments": [
-            { "title": "قرارداد طراحی", "file_name": "contract_design.pdf", "description": "نسخه اصلی قرارداد" }
+            { "title": "قرارداد طراحی", "file_name": "contract_design.pdf" }
           ]
         },
         {
