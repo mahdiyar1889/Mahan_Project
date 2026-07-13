@@ -30,15 +30,21 @@ window.DASHBOARD_DATA = {
             { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/M&E_Pre.rar" }
           ]
         },
+        
         {
           "section_id": "s3",
           "title": "3- مطالعات مرحله دوم",
           "attachments": [
-            { "title": "معماری", "description": "نقشه‌های نهایی معماری و رندرهای نهایی سه بعدی", "file_name": "assets/Architecture.rar" },
+            { 
+              "title": "معماری", 
+              "description": "نقشه‌های نهایی معماری و رندرهای نهایی سه بعدی", 
+              "file_name": "https://drive.google.com/file/d/1nPoJ0GgneFcYi7FLn2QmnjQyonUKqbyf/view?usp=sharing" 
+            },
             { "title": "سازه", "description": "نقشه‌های نهایی سازه، دفترچه محاسبات و آزمایش ژئوتکنیک", "file_name": "assets/Structure.rar" },
             { "title": "تاسیسات", "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/M&E.rar" }
           ]
         },
+
         {
           "section_id": "s4",
           "title": "4- برآورد و اسناد مناقصه",
